@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    def no_c(my_string):
-        new_string = ""
-        for i in my_string:
-            if i != 'c' or i != 'C':
-                new_string = new_string + i
-        return (new_string)
+def no_c(my_string):
+    filtered_chars = []
+    for char in my_string:
+        if char not in {'c', 'C'}:
+            filtered_chars.append(char)
+    return ''.join(filtered_chars)
