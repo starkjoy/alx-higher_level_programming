@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    def add_tuple(tuple_a=(), tuple_b=()):
-        tuple_a += (0, 0)[:2-len(tuple_a)]
-        tuple_b += (0, 0)[:2-len(tuple_b)]
-        result = (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
-        return (result)
+def add_tuple(tuple_a=(), tuple_b=()):
+    a = tuple_a + (0, 0)
+    b = tuple_b + (0, 0)
+    return (a[0] + b[0], a[1] + b[1])
