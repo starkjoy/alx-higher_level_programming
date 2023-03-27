@@ -10,13 +10,13 @@ def list_division(my_list_1, my_list_2, list_length):
             if y == 0:
                 raise ZeroDivisionError("division by 0")
             result.append(x / y)
-        except IndexError:
+        except TypeError:
             print("out of range")
             result.append(0)
-        except TypeError:
+        except ZeroDivisionError:
             print("wrong type")
             result.append(0)
-        except ZeroDivisionError:
+        except IndexError:
             print("division by 0")
             result.append(0)
         finally:
