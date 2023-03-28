@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-'''
-Square is an empty class
-'''
+'''Square is an empty class'''
 class Square:
     pass
