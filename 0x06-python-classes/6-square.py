@@ -1,14 +1,20 @@
 #!/usr/bin/python3
-'''
-Square is an empty class
-'''
+'''Creates a Square object'''
+
+
 class Square:
+    ''' Square Class '''
+
     def __init__(self, size=0, position=(0, 0)):
+        ''' Makes Square
+
+        Args: size: size of square position: position of square'''
         self.size = size
         self.position = position
 
     @property
     def size(self):
+        ''' sets or gets size of square '''
         return self.__size
 
     @size.setter
@@ -21,7 +27,8 @@ class Square:
 
     @property
     def position(self):
-        returm self.__position
+        ''' sets/gets the position of square '''
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -30,9 +37,11 @@ class Square:
         self.__position = value
 
     def area(self):
+        ''' Returns Area of square '''
         return self.__size * self.__size
 
     def my_print(self):
+        ''' prints square '''
         if self.__size == 0:
             print()
         else:
