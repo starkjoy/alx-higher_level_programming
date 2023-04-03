@@ -57,10 +57,12 @@ class Rectangle:
         """ string representation of rectangle """
         if self.width == 0 or self.height == 0:
             return ""
-        row = str(self.print_symbol) * self.width
-        rect = row + "\n"
-        rect += row + "\n" * (self.height - 2) + row if self.height > 2 else ""
-        return rect
+        rect = []
+        for  i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+                return ("".join(rect))
 
     def __repr__(self):
         """ returns a string representation to rebuild object """
