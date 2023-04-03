@@ -93,8 +93,7 @@ class Rectangle:
         """ returns a new rectangle instance width == height == size 
 
         Args:
-            cls: class name
             size: size of square
 
         """
-        return cls(size, size)
+        return (cls(size, size))
