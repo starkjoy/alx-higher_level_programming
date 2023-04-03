@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defines a Rectangle class."""
 
 
@@ -25,7 +24,7 @@ class Rectangle:
 
     @property
     def width(self):
-            """Set rectangle width"""
+        """Set rectangle width"""
         return self.__width
 
     @width.setter
@@ -107,4 +106,4 @@ class Rectangle:
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         type(self).number_of_instances -= 1
-        print("Bye rectangle...")
+            print("Bye rectangle...")
