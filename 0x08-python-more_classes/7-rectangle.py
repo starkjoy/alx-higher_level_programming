@@ -36,7 +36,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TyperError("height must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
@@ -57,13 +57,10 @@ class Rectangle:
         """ string representation of rectangle """
         if self.width == 0 or self.height == 0:
             return ""
-        else:
-            rectangle_str = ""
-            for i in range(self.height):
-                rectangle_str += print_symbol * self.width
-                if i != self.height - 1:
-                    rectangle_str += "\n"
-            return rectangle_str
+        row = str(self.print_symbol) * self.width
+        rect = row + "\n"
+        rect += row + "\n" * (self.height - 2) + row if self.height > 2 else ""
+        return rect
 
     def __repr__(self):
         """ returns a string representation to rebuild object """
