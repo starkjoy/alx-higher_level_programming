@@ -5,4 +5,3 @@
 class LockedClass:
     """ allows class instances of 'first_name' only """
     __slots__ = ['first_name']
-
