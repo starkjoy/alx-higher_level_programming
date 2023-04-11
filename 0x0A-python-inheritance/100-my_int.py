@@ -2,7 +2,7 @@
 """ Switches  == operator with  != operator """
 
 
-Class MyInt(int):
+class MyInt(int):
     """ Subclass of int implementing switch """
     def __eq__(self, value):
         """ Inverted == operator """
