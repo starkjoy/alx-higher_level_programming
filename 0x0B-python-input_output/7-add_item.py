@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+""" Reads a text file and prints it to screen """
 from sys import argv
 from os.path import exists
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
-""" Reads a text file and prints it to screen """
 
 
 filename = "add_item.json"
