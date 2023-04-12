@@ -30,7 +30,10 @@ class Student:
             return dict_serials
 
     def reload_from_json(self, json):
-        """ replaces all attributes of the Student instance """
+        """ replaces all attributes of the Student instance
+        Args:
+            json: source dictionary
+        """
         class_dict = self.__dict__
         class_dict_i = class_dict.items()
         for key, value in json.items():
