@@ -37,6 +37,5 @@ class Student:
         class_dict = self.__dict__
         class_dict_i = class_dict.items()
         for key, value in json.items():
-            json[key] = class_dict_i[key]
-            json[value] = class_dict_i[value]
+        class_dict_i[key] = value
         return json
