@@ -34,8 +34,5 @@ class Student:
         Args:
             json: source dictionary
         """
-        class_dict = self.__dict__
-        class_dict_i = class_dict.items()
         for key, value in json.items():
-        class_dict_i[key] = value
-        return json
+            setattr(self, key, value)
