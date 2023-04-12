@@ -3,7 +3,7 @@
 
 
 def pascal_triangle(n):
-    """ 
+    """
     Returns a list of lists of integers of pascals triangle
     Args:
         n: number of rows for pascals triangle
