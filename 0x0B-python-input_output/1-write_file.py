@@ -3,14 +3,13 @@
 
 
 def write_file(filename="", text=""):
-    """ 
+    """
     Writes to and return character count of file
     Args:
         filename: file
         text: data to wriet to file
     """
-    with open(filename,"w",  encoding="UTF8") as files:
+    with open(filename, "w",  encoding="UTF8") as files:
         files.write(text)
     char_count = len(text)
     return char_count
-
