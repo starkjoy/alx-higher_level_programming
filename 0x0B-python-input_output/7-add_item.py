@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """ Reads a text file and prints it to screen """
+import importlib
+module_1 = importlib.import_module('5-save_to_json_file')
+module_2 = importlib.import_module('6-load_from_json_file')
+from module_1 import save_to_json_file
+from module_2 import load_from_json_file
 from sys import argv
 from os.path import exists
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
 
 
 filename = "add_item.json"
