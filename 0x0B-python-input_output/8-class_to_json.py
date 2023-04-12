@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ returns dictionary description with simple data structure """
-import json
+
 
 def class_to_json(obj):
     """  dictionary to python data structure
