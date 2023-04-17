@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ creates a square class """
 
@@ -14,7 +15,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ overrides str method """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
@@ -42,5 +44,5 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """ dictionary representation of square """
-        dict_sqr = {'id':self.id, 'size':self.size, 'x':self.x, 'y':self.y}
+        dict_sqr = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
         return dict_sqr

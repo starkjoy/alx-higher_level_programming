@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """ creates a rectangle class """
 
@@ -81,7 +82,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """ overrides str method """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute """
@@ -93,5 +95,6 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ Returns the dictionary representation of a rectangle """
-        dict_rect = {'id': self.id, 'width': self.width, 'height':self.height, 'x':self.x, 'y':self.y}
+        dict_rect = {'id': self.id, 'width': self.width, 'height': self.height,
+                     'x': self.x, 'y': self.y}
         return dict_rect
