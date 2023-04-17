@@ -9,7 +9,14 @@ class Rectangle(Base):
     """ creates a rectangle class """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initializes rectangle class """
+        """ Initializes rectangle class
+        Args:
+            width: width
+            height: height
+            x: x
+            y: y
+            id: id
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
