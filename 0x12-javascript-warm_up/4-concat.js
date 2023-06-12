@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const arg1 = process.argv[2];
-const is = "is";
+const is = 'is';
 const arg2 = process.argv[3];
 
 if (arg1 !== undefined && arg2 !== undefined)
