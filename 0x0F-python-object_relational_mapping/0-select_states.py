@@ -5,8 +5,16 @@
 import sys
 import MySQLdb
 
+
 def list_states(username, password, database):
-    """ Actual implementation """
+    """ 
+    Actual implementation
+
+    Args:
+        username (str): MySQL username.
+        password (str): MySQL password.
+        database (str): MySQL database.
+    """
     hostname = "localhost"
     port = 3306
 
