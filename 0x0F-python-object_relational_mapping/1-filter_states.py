@@ -3,7 +3,8 @@ import MySQLdb
 import sys
 
 
-''' This script lists all states with a name starting with N from the database '''
+''' This script lists all states starting with N '''
+
 
 def list_states(username, password, database):
     ''' Actual implementation '''
@@ -27,6 +28,7 @@ def list_states(username, password, database):
         print(row)
     cursor.close()
     connection.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
