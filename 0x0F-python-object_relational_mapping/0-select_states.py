@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-''' Lists state objects' from a database '''
-
+""" Lists state objects' from a database """
 
 
 import MySQLdb
@@ -8,7 +7,7 @@ import sys
 
 
 def list_states(username, password, database):
-    ''' Actual implementation '''
+    """ Actual implementation """
 
     hostname = "localhost"
     port = 3306
