@@ -4,7 +4,7 @@ import sys
 import MySQLdb
 
 
-def list_states(username, password, database):
+def List_states(username, password, database):
     """ 
     Actual implementation
 
