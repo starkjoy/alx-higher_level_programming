@@ -3,8 +3,6 @@ import MySQLdb
 import sys
 
 
-''' This script lists all states from a database '''
-
 def list_states(username, password, database):
     ''' Actual implementation '''
 
