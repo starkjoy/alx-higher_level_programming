@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """ Lists state objects from a database """
-
-
-
 import sys
 import MySQLdb
 
