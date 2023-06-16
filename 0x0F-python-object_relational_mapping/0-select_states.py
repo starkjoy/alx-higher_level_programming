@@ -21,8 +21,7 @@ def list_states(username, password, database):
             )
 
     cursor = connection.cursor()
-    query = "SELECT * FROM `states`"
-    cursor.execute(query)
+    cursor.execute("SELECT * FROM states")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
