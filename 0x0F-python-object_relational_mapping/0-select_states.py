@@ -5,10 +5,8 @@
 import sys
 import MySQLdb
 
-
 def list_states(username, password, database):
     """ Actual implementation """
-
     hostname = "localhost"
     port = 3306
 
