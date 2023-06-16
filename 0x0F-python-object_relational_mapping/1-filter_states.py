@@ -1,13 +1,20 @@
 #!/usr/bin/python3
+"""This script lists all states starting with N"""
+
+
 import MySQLdb
 import sys
 
 
-''' This script lists all states starting with N '''
-
-
 def list_states(username, password, database):
-    ''' Actual implementation '''
+    """
+    Actual Implementation
+
+    Args:
+        username: MySQL username
+        password: MySQL password
+        database: MySQL database
+    """
 
     hostname = "localhost"
     port = 3306
