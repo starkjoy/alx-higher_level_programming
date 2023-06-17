@@ -5,7 +5,6 @@
 import MySQLdb
 import sys
 
-
 def list_states(username, password, database, state_name):
     """
     Actual implementation
@@ -30,7 +29,7 @@ def list_states(username, password, database, state_name):
 
     cursor = connection.cursor()
     query = "SELECT * FROM states WHERE  name = %s ORDER BY id ASC"
-    cursor.execute(query, state_name)
+    cursor.execute(query, (state_name,))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
