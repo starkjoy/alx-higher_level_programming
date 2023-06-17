@@ -1,12 +1,21 @@
 #!/usr/bin/python3
+""" Displays all values in states by specified name"""
+
+
 import MySQLdb
 import sys
 
 
-''' This script displays all values in states by specified name '''
-
 def list_states(username, password, database, state_name):
-    ''' Actual implementation '''
+    """
+    Actual Implementation
+
+    Args:
+        username: SQL name
+        password: SQL password
+        database: SQL database
+        state_name: State object
+    """
 
     hostname = "localhost"
     port = 3306
@@ -20,13 +29,16 @@ def list_states(username, password, database, state_name):
             )
 
     cursor = connection.cursor()
-    query = "SELECT * FROM states WHERE  name = '{}' ORDER BY id ASC".format(state_name)
+    query = "SELECT * FROM states WHERE name = '{}' \
+            ORDER BY idASC".format(state_name)
+
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
     cursor.close()
     connection.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
