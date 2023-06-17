@@ -1,12 +1,21 @@
 #!/usr/bin/python3
+"""Displays all values in states by name, safely"""
+
+
 import MySQLdb
 import sys
 
 
-''' This script displays all values in states by specified name safely (SQL-injection free) '''
-
 def list_states(username, password, database, state_name):
-    ''' Actual implementation '''
+    """
+    Actual implementation
+    
+    Args:
+        username: SQL name
+        password: SQL password
+        database: SQL database
+        state_name: object to search
+    """
 
     hostname = "localhost"
     port = 3306
@@ -27,6 +36,7 @@ def list_states(username, password, database, state_name):
         print(row)
     cursor.close()
     connection.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
