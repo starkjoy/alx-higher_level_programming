@@ -28,7 +28,8 @@ def list_cities(username, password, database):
             )
 
     cursor = connection.cursor()
-    query = "SELECT * FROM cities ORDER BY id ASC"
+    query = "SELECT c.id, c.name, s.name FROM cities as c \
+            INNER JOIN states as s ON c.state_id = s.id ORDER BY c.id"
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
