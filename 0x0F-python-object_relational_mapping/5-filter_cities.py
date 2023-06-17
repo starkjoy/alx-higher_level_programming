@@ -1,12 +1,21 @@
 #!/usr/bin/python3
+"""This scripts lists all cities from the database"""
+
+
 import MySQLdb
 import sys
 
 
-''' This script lists all cities from the database '''
-
 def list_cities(username, password, database, state_name):
-    ''' Actual implementation '''
+    """
+    Actual implementation
+
+    Args:
+        username: SQL name
+        password: SQL password
+        database: SQL database
+        state_name: search object name
+    """
 
     hostname = "localhost"
     port = 3306
@@ -27,6 +36,7 @@ def list_cities(username, password, database, state_name):
         print(row)
     cursor.close()
     connection.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
