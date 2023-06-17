@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 """Creates a state class"""
 
-
-import SQLAlchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
-
 
 Base = declarative_base()
 
