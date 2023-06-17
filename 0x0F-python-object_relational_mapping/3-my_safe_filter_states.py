@@ -5,10 +5,11 @@
 import MySQLdb
 import sys
 
+
 def list_states(username, password, database, state_name):
     """
     Actual implementation
-    
+
     Args:
         username: SQL name
         password: SQL password
