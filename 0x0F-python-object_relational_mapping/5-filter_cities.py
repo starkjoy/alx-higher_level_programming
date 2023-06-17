@@ -29,7 +29,7 @@ def list_cities(username, password, database, state_name):
             )
 
     cursor = connection.cursor()
-    query = "SELECT cities.* FROM citiesJOIN states ON \
+    query = "SELECT cities.* FROM cities JOIN states ON \
             cities.state_id = states.id WHERE states.name = %s ORDER BY \
             cities.id ASC"
     cursor.execute(query, (state_name,))
