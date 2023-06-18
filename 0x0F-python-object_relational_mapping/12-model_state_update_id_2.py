@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-def delete_state(username, password, database):
+def update_state(username, password, database):
     """
     Actual implementation
 
@@ -26,9 +26,8 @@ def delete_state(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name.like('%a%')).all()
-    for states in state:
-        session.delete(states)
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
     session.commit()
 
     session.close()
@@ -39,4 +38,4 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 
-    delete_state(username, password, database)
+    update_state(username, password, database)
