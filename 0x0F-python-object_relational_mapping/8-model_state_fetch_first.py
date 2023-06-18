@@ -1,19 +1,28 @@
 #!/usr/bin/python3
+"""This script prints the first state object from a database"""
+
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-''' This script prints the first state object from a database '''
-
 def list_states(username, password, database):
-    ''' Actual implementation '''
+    """
+    Actual Implementation
+
+    Args:
+        username: SQL name
+        password: SQL password
+        database: SQL database
+    """
 
     hostname = "localhost"
     port = 3306
 
-    engine = create_engine(f"mysql://{username}:{password}@{hostname}:{port}/{database}")
+    engine = create_engine(f"mysql://{username}:{password}@{hostname}:\
+            {port}/{database}", pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -24,6 +33,7 @@ def list_states(username, password, database):
         print("Nothing")
 
     session.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
