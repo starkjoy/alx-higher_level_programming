@@ -26,7 +26,7 @@ def list_states(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id.asc()).first()
+    state = session.query(State).order_by(State.id.asc()).first()
     if state:
         print(f"{state.id}: {state.name}")
     else:
