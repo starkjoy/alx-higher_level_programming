@@ -27,10 +27,13 @@ def list_states(username, password, database, state_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State.).filter(State.name == state_name).first()
-    if state:
-        print(state.id)
-    else:
+    found = False
+    for state in session.query(State):
+        if state.name == state_name:
+            print("{}".format(state.id))
+            found = True
+            break
+    if found is False:
         print("Not found")
 
     session.close()
