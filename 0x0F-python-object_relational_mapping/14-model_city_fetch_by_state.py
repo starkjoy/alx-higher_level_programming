@@ -5,6 +5,7 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import State
 from model_city import City
 
 
@@ -25,11 +26,13 @@ def list_cities(username, password, database):
             {port}/{database}")
     Session = sessionmaker(bind=engine)
     session = Session()
+i
+    cities = session.query(City, State).filter(City.state_id == State.id)\
+            .order_by(City.id)
+    for city, state in cities:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
-    cities = session.query(City).order_by(City.id.asc()).all()
-    for city in cities:
-        state_name = city.state.name
-        print(f"{state_name}: ({city.id}) {city.name}")
+    session.commit()
     session.close()
 
 
