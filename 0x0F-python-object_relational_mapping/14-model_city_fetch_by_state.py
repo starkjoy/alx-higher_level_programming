@@ -26,7 +26,7 @@ def list_cities(username, password, database):
             {port}/{database}")
     Session = sessionmaker(bind=engine)
     session = Session()
-i
+
     cities = session.query(City, State).filter(City.state_id == State.id)\
             .order_by(City.id)
     for city, state in cities:
