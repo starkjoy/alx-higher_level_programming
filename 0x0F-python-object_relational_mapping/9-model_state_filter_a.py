@@ -26,10 +26,9 @@ def list_states(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%')).\
-            order_by(State.id.asc()).all()
-    for state in states:
-        print(state)
+    for state in session.query(State).order_by(State.id):
+        if "a" in state.name:
+            print("{}: {}".format(state.id, state.name))
 
     session.close()
 
