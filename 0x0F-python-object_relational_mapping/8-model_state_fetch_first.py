@@ -28,7 +28,7 @@ def list_states(username, password, database):
 
     states = session.query(State).order_by(State.id.asc()).first()
     if state:
-        print(state)
+        print(f"{state.id}: {state.name}")
     else:
         print("Nothing")
 
