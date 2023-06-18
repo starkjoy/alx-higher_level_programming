@@ -22,7 +22,7 @@ def list_states(username, password, database):
     port = 3306
 
     engine = create_engine(f"mysql://{username}:{password}@{hostname}:\
-            {port}/{database}", pool_pre_ping=True)
+            {port}/{database}")
     Session = sessionmaker(bind=engine)
     session = Session()
 
