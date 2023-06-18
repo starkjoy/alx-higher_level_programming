@@ -1,14 +1,22 @@
 #!/usr/bin/python3
+"""This script prints the state objects containing the letter 'a'"""
+
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-''' This script prints state objects containing the letter 'a' from a database '''
-
 def list_states(username, password, database):
-    ''' Actual implementation '''
+    """
+    Actual impementation
+
+    Args:
+        username: SQL name
+        password: SQL password
+        database: SQL database
+    """
 
     hostname = "localhost"
     port = 3306
@@ -22,6 +30,7 @@ def list_states(username, password, database):
         print(state)
 
     session.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
