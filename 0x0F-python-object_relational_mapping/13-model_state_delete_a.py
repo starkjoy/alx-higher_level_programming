@@ -30,6 +30,8 @@ def delete_state(username, password, database):
 
     for state in states:
         session.delete(state)
+
+    session.commit()
     session.close()
 
 
