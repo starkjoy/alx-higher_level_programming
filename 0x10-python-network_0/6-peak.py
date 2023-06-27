@@ -2,6 +2,12 @@
 """Defines a peak-finding algorithm."""
 
 def find_peak(list_of_integers):
+  """
+  Actual implementation
+
+  Args:
+    list_of_integers: list of integers
+  """
   size = len(list_of_integers)
   if size == 1:
     return list_of_integers[0]
