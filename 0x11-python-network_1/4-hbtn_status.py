@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Fetches the specified url """
 
+
 import requests
 
 
